@@ -1,0 +1,286 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fnil\fcharset0 Menlo-Regular;\f2\fswiss\fcharset0 Helvetica;
+\f3\fswiss\fcharset0 Helvetica-Bold;\f4\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red217\green180\blue98;\red0\green0\blue0;\red0\green0\blue0;
+\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c88344\c75350\c45882;\cssrgb\c0\c0\c0;\csgray\c0;
+\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww26680\viewh13600\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 Git clone arpitrepo\
+Cd projet repo/directory\
+Git remote add upstream git@github.com/cbu-twinkie.git  \
+   35  git fetch --all\
+   36  git checkout -b v1.9.233 upstream/v1.9.233\
+Git pull\
+   37  git commit -a -m \'91my modifications\'92\
+   38  git status\
+   39  git add .\
+   40  git commit -a -m \'91my modifications\'92\
+   41  git commit -m \'91my modifications\'92\
+   42  git commit -m"my modifications"\
+   43  git push origin :v1.9.233\
+   44  git push origin v1.9.233\
+   45  git push origin :v1.9.233\
+\
+				git fetch \'97all\
+				gut merge origin/v1.9.233\
+   46  history\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf2 \CocoaLigature0 git remote set-url origin https://arpit340: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@github.com/arpit340/Learning.git
+\f0\fs36 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 \
+\
+https://medium.com/@gitship/15-git-hacks-to-save-your-life-as-a-developer-aa8808846dbb#:~:text=To%20exit%20git%20log%2C%20type,h%E2%80%9D%20to%20seek%20for%20help.\
+\
+// For Reverting a commit \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf3 \expnd0\expndtw0\kerning0
+git checkout name_of_branch\
+git status                     # make sure your working directory isn't dirty\
+git tag -f rollback            # this tag is to make it easy to undo this if you screw up\
+git reset --hard HEAD^         # this rolls the branch back one commit\
+git push --force               # and this pushes the rolled-back branch to your repo\
+git reset --hard rollback      # this will point back to the rollback point if you mess up\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\
+System	\
+Git config \'97system\
+\
+User\
+Git config \'97global\
+\
+Project\
+Git config \
+\
+List all configs\
+Git config \'97list\
+\
+Remove from staged\
+git restore \'97staged Integration\\ Tests/FRS/Rax.Net.FRS.sln\
+\
+Garbage collection -\
+Cleans out the old object s not referenced anymore in git\
+Git gc \
+\
+By default cleans out objects older than 2 weeks\
+Git gc \'97 prune\
+\
+Automatically set gc\
+Git config gc.pruneexpire \'9330 days\'94\
+\
+\
+GIT LOG -  For help - man git-log\
+Git log \'97decorate \'97online\
+\
+Shows texual graph\
+Git log \'97graph\
+\
+Git log \'97since=\'934 days\'94\
+\
+Search in git log \'97 build is keyword\
+Git log -S build\
+\
+Shows statistics of commits\
+Git log \'97stat\
+Git log \'97shortstat\
+\
+Formatting the log output - for help use - man git-log\
+Git log \'97pretty=format:\'94%h - %an - %ar - %s\'94\
+\
+GIT CLONE - Used in case you want to do some experimental stuff without touching main repo\
+Help- man git-clone\
+Git clone <localRepo>  <newRepo>\
+Git clone hi-there hi-there-test\
+\
+Cloning remote repo \
+Git clone <remote-url>\
+\
+Shows the remote servers that are being tracked for the current repo\
+Git remote -v\
+\
+Give us more details\
+Git remote show origin\
+Git remote show upstream\
+\
+GIT TAG - Annotated N Lighweight \
+A tag is used to mark a specific commit\
+Mostly annotated are used as they have more info regarding the commit\
+Git tag -a <>\
+\
+\
+GIT BRANCH\
+Creates new branch\
+Git branch <branchname>\
+Git checkout <branchname>\
+HEAD - pointer to the current branch being worked on, can use git log and git status to view which branch HEAD is pointing to \'97 cat .git/HEAD\
+Man git-branch and man git-checkout\
+\
+Deletes the branc\
+Git branch -d <branch>\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3\b \cf0 Get the hash for last commit on branch
+\f2\b0 \
+Cat .git/ref/heads/master\
+Cat .git/ref/heads/v2.0\
+\
+MERGING BRANCHES LOCALLY\
+Git merge combines the latest commits from two branches into one branch..Creates a new fast forward commit hash on the merged branch\
+Git checkout master\
+Git merge v2.0\
+Man git-merge\
+\
+Use git status to check the conflicts during merge\
+Open the file and git automatically labelled the conflicted areas..Edit it and removed the labelled texts\
+Use Git add to help resolve the merge \
+\
+\
+REBASING - man git-rebase\
+Replay changes made to one branch over the top of another branch..\
+\
+Git checkout master\
+Git rebase v2.0 or git rebase development\
+Use rebase only when using local repositories..it can give a cleaner history but not exact history\
+Depends on org. Whether to use merge or rebase\
+\
+Reverting a Commit\
+Reverts a commit.\
+It also intact the history of the project\
+\
+Git revert HEAD\
+Reverting 2 second commit from HEAD\
+Git revert HEAD~2 \
+\
+Git diff - man git-diff\
+Views the differences between two commits, files, blocks, or between the working tree and the staging area\
+\
+Git log \'97decorate \'97oneline\
+Check check between different commits by using SHA hashes\
+Git diff def12343 egf1234\
+\
+Shows the summary of git diff\
+Git diff \'97summary def12343 egf1234\
+\
+Shows the commit based on SHA1\
+Git show def123\
+We can use min 4 characters but in order to find inambigoius results use 8-10 chars\
+\
+Git show HEAD - Points to the last commit\
+\
+Git show HEAD^ - Heads to the parent commit or 1 commit before last commit\
+Git show HEAD^^ or git show HEAD~2\
+\
+Git ls-tree \
+can be used to check the change in the directory structure or files addition or deletion \
+Ls-tree is similar to ls -a cmd in linux \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf4 \CocoaLigature0 git ls-tree HEAD shared/\
+Git ls-tree HEAD^ shared/\
+\
+HEAD, master, def1233(SHA value) ARE CALLED TREEISH
+\f2\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+FILTER THE COMMIT LOG\
+Git log -3 \'97return just 3 logs\
+Git log \'97since= 2019-04-13\
+Git log \'97author=\'93Kevin\
+Git log \'97grep=\'93Initial\'94\
+Git log abc123..HEAD\
+Git log explorers.html (on particular files)\
+\
+Format the commit log \
+Git log -p (patch)\
+Git log \'97stat (only give stats like insertions and deletions)\
+Git log \'97format=short (by default : medium, oneline, full, fuller, email, raw )\
+Git log \'97graph \'97all \'97oneline \'97decorate\
+\
+BRANCHING\
+Easy and cheap\
+\
+Git checkout -b branch_to_delete\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8259 	}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+COMPARE BRANCHES\
+Git diff master..new_feature\
+\
+Check 2 commits back \
+Git diff master..new_feature^^\
+\
+Check which branches are merged\
+Git branch \'97merged\
+\
+Git branch \'97no-merged. \'97 Very useful to check if code is merged into master or not from a specific branch\
+\
+RENAME BRANCHES\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8259 	}Git branch -m seo_branch\
+{\listtext	\uc0\u8259 	}Or\
+{\listtext	\uc0\u8259 	}Git branch -m old_branch new_branch\
+{\listtext	\uc0\u8259 	}\
+{\listtext	\uc0\u8259 	}DELETE BRANCHES\
+{\listtext	\uc0\u8259 	}You should not checkout that branch of course\
+{\listtext	\uc0\u8259 	}Git branch -d branch_name \
+{\listtext	\uc0\u8259 	}git branch -D branch_name  \'97 when we have commits on the branch\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+Configure Command Prompt\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f4 \cf5 \cb6 \expnd0\expndtw0\kerning0
+Add .git-prompt.sh to show the branch name \
+\
+
+\f2 RESET TYPES\
+Soft , mixed , hard\
+\
+\'97Soft reset\
+Moves HEAD pointer\
+Does not change staging index\
+Does not change working dir\
+Git reset \'97soft <tree-ish>\
+\
+\'97Mixed reset\
+Moves HEAD pointer\
+Changes staging index to match repository\
+Does not change working dir\
+Default choice\
+Git reset \'97mixed <tree-ish>\
+\
+\'97Hard reset\
+Moves HEAD pointer\
+Changes staging index to match repository\
+Changes working dir to match repository\
+Git reset \'97hard <tree-ish>\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+}
