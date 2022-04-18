@@ -1,0 +1,382 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-Oblique;
+\f3\fswiss\fcharset0 Helvetica-Light;\f4\fmodern\fcharset0 Courier;\f5\fnil\fcharset0 HelveticaNeue;
+\f6\fnil\fcharset0 HelveticaNeue-Bold;\f7\fnil\fcharset0 HelveticaNeue-Italic;}
+{\colortbl;\red255\green255\blue255;\red31\green56\blue73;\red255\green255\blue255;\red0\green0\blue0;
+\red100\green100\blue100;\red223\green33\blue121;\red247\green238\blue241;\red0\green0\blue0;\red38\green38\blue38;
+}
+{\*\expandedcolortbl;;\cssrgb\c16078\c28235\c35686;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;
+\cssrgb\c46667\c46667\c46667;\cssrgb\c90980\c24314\c54902;\cssrgb\c97647\c94902\c95686;\cssrgb\c0\c0\c0\c87059;\cssrgb\c20000\c20000\c20000;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl580\sa200\partightenfactor0
+
+\f0\b\fs52\fsmilli26400 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 File and Buffer Operations with Vim\
+\pard\pardeftab720\sl520\sa200\partightenfactor0
+
+\f1\b0\fs48 \cf2 Introduction\
+\pard\pardeftab720\sa200\partightenfactor0
+
+\fs38\fsmilli19200 \cf4 \strokec4 The ability to work with files and buffers in Vim is just as important as the actual editing in Vim you'll do so often in your career. Most people can manage to edit a file or a buffer, but having the skills to adroitly handle the sometimes many buffers that will be in use is valuable, to say the least.\
+In this hands-on lab you'll gain some practice opening new and existing files, open multiple files and navigate among the buffers handily.\
+You'll also be working with saving and exiting, exiting without saving changes, then causing a crash to experience recovering from one.\'a0
+\f2\i Knowing how to do this sets you apart from most casual Vim users!
+\f1\i0 \
+\pard\pardeftab720\sl460\sa200\partightenfactor0
+
+\f3\fs43\fsmilli21600 \cf5 \strokec5 Logging In\
+\pard\pardeftab720\sa200\partightenfactor0
+
+\f1\fs38\fsmilli19200 \cf4 \strokec4 Use the credentials provided on the hands-on lab overview page, and log in as\'a0
+\f4 \cf6 \cb7 \strokec6 cloud_user
+\f1 \cf4 \cb3 \strokec4 .\
+\pard\pardeftab720\sl520\sa200\partightenfactor0
+
+\fs48 \cf2 \strokec2 Open New and Existing Files, Open Multiple Files at Once, Then Navigate Amongst Open Buffers (File Contents)\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f5\fs28 \cf8 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Open Vim:
+\f4 \cf3 \cb9 \strokec3  vim\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Press the\'a0
+\f6\b i** key and note the bottom left says you are in Insert Mode. Type in some text such as: **Mimsy were the borogroves
+\f5\b0 \'a0or\'a0
+\f6\b It was a dark and stormy night
+\f5\b0 .\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 When done entering the text, use the\'a0
+\f6\b Esc
+\f5\b0 \'a0key to return to Command Mode\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Write the new file to disk with:
+\f4 \cf3 \cb9 \strokec3  :w myfirstnovel.txt\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Then exit Vim with:
+\f4 \cf3 \cb9 \strokec3  :q\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Next open a read-only (root-only) file with:
+\f4 \cf3 \cb9 \strokec3  vim /etc/hosts\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Now "accidentally" change the file by pressing the\'a0
+\f6\b i
+\f5\b0 \'a0key to go to Insert Mode, this will cause an alarming error message to appear:
+\f4 \cf3 \cb9 \strokec3  W10: Warning: Changing a readonly file\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Use\'a0
+\f6\b Esc
+\f5\b0 \'a0to return to Command Mode and\'a0
+\f6\b u
+\f5\b0 \'a0to ensure that no changes have been made, indicated by a message at the status line of\'a0
+\f4 \cf6 \cb7 \strokec6 Already at oldest change
+\f5 \cf8 \cb3 \strokec8 .\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	9.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 And just in case, exit the file with:
+\f4 \cf3 \cb9 \strokec3  :q!\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	10.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Now open three new named buffers with:
+\f4 \cf3 \cb9 \strokec3 vim file1 file2 file3\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	11.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Vim will load and you can verify you are in the blank named buffer\'a0
+\f4 \cf6 \cb7 \strokec6 file1
+\f5 \cf8 \cb3 \strokec8 .\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	12.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 List out the buffers using both of the commands:
+\f4 \cf3 \cb9 \strokec3 :buffers\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl380\partightenfactor0
+\ls1\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	13.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 :ls\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf8 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	14.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Rotate through the buffers until you reach\'a0
+\f4 \cf6 \cb7 \strokec6 file1
+\f5 \cf8 \cb3 \strokec8 \'a0again with:
+\f4 \cf3 \cb9 \strokec3 :bn\uc0\u8232 \cf9 \strokec9 \uc0\u8232 \cf6 \cb7 \strokec6 :bn
+\f5 \cf8 \cb3 \strokec8 , by the way, is short for "buffer next."\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa200\partightenfactor0
+\ls1\ilvl0
+\f1\fs38\fsmilli19200 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	15.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Add a few words to the\'a0
+\f4 \cf6 \cb7 \strokec6 file1
+\f1 \cf4 \cb3 \strokec4 \'a0buffer with:\cb1 \uc0\u8232 
+\f4\fs28 \cf3 \cb9 \strokec3 i\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl380\partightenfactor0
+\ls1\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	16.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 A few words of text\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f1\fs38\fsmilli19200 \cf4 \cb3 \strokec4 Then press\'a0
+\f0\b Esc
+\f1\b0 \cb1 \uc0\u8232 
+\f5\fs28 \cf8 \strokec8 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa200\partightenfactor0
+\ls1\ilvl0
+\f1\fs38\fsmilli19200 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	17.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Attempt to switch to the last buffer with:\cb1 \uc0\u8232 
+\f4\fs28 \cf3 \cb9 \strokec3 :blast\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf8 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	18.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 You will see an error message:
+\f4 \cf3 \cb9 \strokec3 E37: No write since last change (add ! to override)\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	19.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Hide the changed buffer and move to the last open buffer with:
+\f4 \cf3 \cb9 \strokec3 :hide blast\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	20.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 List out the open buffers again with:
+\f4 \cf3 \cb9 \strokec3 :ls\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\pard\pardeftab720\sl520\sa200\partightenfactor0
+
+\f1\fs48 \cf2 \cb3 \strokec2 Importing External Command Output, Using External Commands on Buffers, Writing Buffer Contents to External Commands\
+\pard\pardeftab720\sa200\partightenfactor0
+
+\f0\b\fs38\fsmilli19200 \cf4 \strokec4 Note:
+\f1\b0 \'a0You must have done\'a0
+\f0\b Task 1
+\f1\b0 \'a0before continuing with\'a0
+\f0\b Task 2
+\f1\b0 .\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f5\fs28 \cf8 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Switch to the\'a0
+\f4 \cf6 \cb7 \strokec6 file2
+\f5 \cf8 \cb3 \strokec8 \'a0buffer with:
+\f4 \cf3 \cb9 \strokec3  :b file2\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Add the same text as you did in\'a0
+\f4 \cf6 \cb7 \strokec6 file1
+\f5 \cf8 \cb3 \strokec8 \'a0and hit\'a0
+\f6\b Esc
+\f5\b0 .\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Attempt to go to the\'a0
+\f4 \cf6 \cb7 \strokec6 file3
+\f5 \cf8 \cb3 \strokec8 \'a0buffer, and when you get the error message use:
+\f4 \cf3 \cb9 \strokec3  :hide b file3\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Add the same text to the\'a0
+\f4 \cf6 \cb7 \strokec6 file3
+\f5 \cf8 \cb3 \strokec8 \'a0buffer and hit\'a0
+\f6\b Esc
+\f5\b0 .\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Confirm the changed, but not saved, status of all 3 buffers by inspecting the output of the\'a0
+\f4 \cf6 \cb7 \strokec6 :ls
+\f5 \cf8 \cb3 \strokec8 \'a0command. They should each have\'a0
+\f6\b +
+\f5\b0 \'a0character just before the files' names.\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Hit\'a0
+\f6\b Enter
+\f5\b0 \'a0to get out of the file list, then write the contents of the\'a0
+\f4 \cf6 \cb7 \strokec6 file3
+\f5 \cf8 \cb3 \strokec8 \'a0buffer to disk with:
+\f4 \cf3 \cb9 \strokec3  :w\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Confirm the status of\'a0
+\f4 \cf6 \cb7 \strokec6 file3
+\f5 \cf8 \cb3 \strokec8 \'a0with the\'a0
+\f4 \cf6 \cb7 \strokec6 :ls
+\f5 \cf8 \cb3 \strokec8 \'a0command, there should be no\'a0
+\f4 \cf6 \cb7 \strokec6 +
+\f5 \cf8 \cb3 \strokec8 \'a0in the 9th column.\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Now save\'a0
+\f4 \cf6 \cb7 \strokec6 file3
+\f5 \cf8 \cb3 \strokec8 \'a0as a new file with:
+\f4 \cf3 \cb9 \strokec3  :saveas file4\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	9.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Inspect the\'a0
+\f4 \cf6 \cb7 \strokec6 :ls
+\f5 \cf8 \cb3 \strokec8 \'a0output to see what happened.\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	10.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Switch to the\'a0
+\f4 \cf6 \cb7 \strokec6 file1
+\f5 \cf8 \cb3 \strokec8 \'a0buffer with:
+\f4 \cf3 \cb9 \strokec3 :b 1\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	11.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Write the\'a0
+\f4 \cf6 \cb7 \strokec6 file1
+\f5 \cf8 \cb3 \strokec8 \'a0buffer contents to\'a0
+\f4 \cf6 \cb7 \strokec6 file5
+\f5 \cf8 \cb3 \strokec8 \'a0on disk with:
+\f4 \cf3 \cb9 \strokec3 :w file5\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	12.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Inspect the\'a0
+\f4 \cf6 \cb7 \strokec6 :ls
+\f5 \cf8 \cb3 \strokec8 \'a0output to see what happened.\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	13.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Run a listing on the directory to see if\'a0
+\f4 \cf6 \cb7 \strokec6 file5
+\f5 \cf8 \cb3 \strokec8 \'a0exists:
+\f4 \cf3 \cb9 \strokec3 :!ls -l\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb3 \strokec8 Press\'a0
+\f6\b Enter
+\f5\b0 .\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	14.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Verify the status of the\'a0
+\f4 \cf6 \cb7 \strokec6 file1
+\f5 \cf8 \cb3 \strokec8 \'a0buffer by pressing\'a0
+\f6\b Ctrl-g
+\f5\b0 \'a0and then run\'a0
+\f4 \cf6 \cb7 \strokec6 :ls
+\f5 \cf8 \cb3 \strokec8 .\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	15.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Quit all unsaved buffers and exit Vim with:
+\f4 \cf3 \cb9 \strokec3 :qa!\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\pard\pardeftab720\sl520\sa200\partightenfactor0
+
+\f1\fs48 \cf2 \cb3 \strokec2 Cause and Recover from a Vim Crash\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f5\fs28 \cf8 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Open Vim with a named buffer using:
+\f4 \cf3 \cb9 \strokec3  vim crashtest.txt\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa200\partightenfactor0
+\ls3\ilvl0
+\f1\fs38\fsmilli19200 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Add some text to the buffer with:\cb1 \uc0\u8232 
+\f4\fs28 \cf3 \cb9 \strokec3  i\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl380\partightenfactor0
+\ls3\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3  This is a crash test file\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f1\fs38\fsmilli19200 \cf4 \cb3 \strokec4 Press\'a0
+\f0\b Esc
+\f1\b0 \cb1 \uc0\u8232 
+\f5\fs28 \cf8 \strokec8 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa200\partightenfactor0
+\ls3\ilvl0
+\f1\fs38\fsmilli19200 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Save the buffer to disk with:\cb1 \uc0\u8232 
+\f4\fs28 \cf3 \cb9 \strokec3  :w\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf8 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Add another line to the buffer with:
+\f4 \cf3 \cb9 \strokec3  o\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl380\partightenfactor0
+\ls3\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3  This is a second line\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb3 \strokec8 Then press\'a0
+\f6\b Esc
+\f5\b0 .\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf8 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Select and set all of the file contents to uppercase letters with:
+\f4 \cf3 \cb9 \strokec3  ggVG\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl380\partightenfactor0
+\ls3\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3  U\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf8 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	9.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Add a third line to the file with:
+\f4 \cf3 \cb9 \strokec3  :$ read !date\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa200\partightenfactor0
+\ls3\ilvl0
+\f2\i\fs38\fsmilli19200 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	10.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Without saving
+\f1\i0 , kill the Vim session with:\cb1 \uc0\u8232 
+\f4\fs28 \cf3 \cb9 \strokec3  :!pkill -9 vim\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f0\b\fs38\fsmilli19200 \cf4 \cb3 \strokec4 Note:
+\f1\b0 \'a0This will kill the Vim process and verify this happened by dropping you to the shell and showing the process was\'a0
+\f4 \cf6 \cb7 \strokec6 Killed
+\f1 \cf4 \cb3 \strokec4 . There may be a notice that no writes were made since the last change.\cb1 \uc0\u8232 
+\f5\fs28 \cf8 \strokec8 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa200\partightenfactor0
+\ls3\ilvl0
+\f1\fs38\fsmilli19200 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	11.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Verify that Vim is\'a0
+\f2\i not
+\f1\i0 \'a0still active with:\cb1 \uc0\u8232 
+\f4\fs28 \cf3 \cb9 \strokec3  ps aux | grep vim\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf8 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	12.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 The output should not list more than the grep for\'a0
+\f4 \cf6 \cb7 \strokec6 vim
+\f5 \cf8 \cb3 \strokec8 .\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	13.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Start up Vim again, specifying the previous file:
+\f4 \cf3 \cb9 \strokec3 vim crashtest.txt\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	14.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 You'll see the dreaded\'a0
+\f4 \cf6 \cb7 \strokec6 E325: ATTENTION
+\f5 \cf8 \cb3 \strokec8 \'a0error message and have various options at the bottom of the screen.\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	15.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Remembering the contents of the buffer when we killed it, choose the\'a0
+\f4 \cf6 \cb7 \strokec6 (R)ecover
+\f5 \cf8 \cb3 \strokec8 \'a0option.\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	16.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Read the message, paying\'a0
+\f7\i close
+\f5\i0 \'a0attention to the admonition\'a0
+\f4 \cf6 \cb7 \strokec6 You may want to delete the .swp file now
+\f5 \cf8 \cb3 \strokec8 , and press\'a0
+\f6\b Enter
+\f5\b0 .\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	17.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Save the file to disk and exit with:
+\f4 \cf3 \cb9 \strokec3 :wq\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	18.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Edit the file again with:
+\f4 \cf3 \cb9 \strokec3 vim crashtest.txt\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	19.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Upon seeing the now less-dreaded\'a0
+\f4 \cf6 \cb7 \strokec6 E325
+\f5 \cf8 \cb3 \strokec8 \'a0error, you can now choose to\'a0
+\f4 \cf6 \cb7 \strokec6 (D)elete
+\f5 \cf8 \cb3 \strokec8 \'a0the\'a0
+\f4 \cf6 \cb7 \strokec6 .swp
+\f5 \cf8 \cb3 \strokec8 \'a0file as directed.\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	20.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Alternatively, you can choose to\'a0
+\f4 \cf6 \cb7 \strokec6 (Q)uit
+\f5 \cf8 \cb3 \strokec8 \'a0and then when you are out of Vim, verify the existence of, and delete the\'a0
+\f4 \cf6 \cb7 \strokec6 .swp
+\f5 \cf8 \cb3 \strokec8 \'a0file with:
+\f4 \cf3 \cb9 \strokec3 ls -l\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl380\partightenfactor0
+\ls3\ilvl0\cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	21.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 (Verify the file exists)\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	22.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 rm -f .crashtest.txt.swp\uc0\u8232 \cf9 \strokec9 \uc0\u8232 
+\f5 \cf8 \cb1 \strokec8 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf8 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	23.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Now try editing the file again, and you will not see the error message anymore.\cb1 \
+\pard\pardeftab720\sl520\sa200\partightenfactor0
+
+\f1\fs48 \cf2 \cb3 \strokec2 Conclusion\
+\pard\pardeftab720\sa200\partightenfactor0
+
+\fs38\fsmilli19200 \cf4 \strokec4 Now that you have some practice under your belt, you're able to have several files open in a single Vim session, and recover from a crash. Congratulations!\
+}
