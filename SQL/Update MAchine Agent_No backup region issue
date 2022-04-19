@@ -1,0 +1,22 @@
+Select *, use_servicenet, storage_location, storage_location_base_url from machine_agent where ser
+
+
+select machine_agent_id, use_servicenet, storage_location, storage_location_base_url * from core.dbo.machine_agent 
+
+where machine_agent_id = 6615 
+
+Begin TRANSACTION
+  Update core.dbo.machine_agent set use_servicenet = 1, storage_location = 'ORD', storage_location_base_url = 'XYZ' 
+  
+ OUTPUT
+ inserted.machine_agent_id,
+ inserted.use_servicenet,
+ inserted.storage_location_base_url,
+ inserted.storage_location
+
+where machine_agent_id = 6615
+
+rollback TRANSACTION
+
+select machine_agent_id, use_servicenet, storage_location, storage_location_base_url * from core.dbo.machine_agent 
+where machine_agent_id = 6615 

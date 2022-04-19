@@ -1,0 +1,101 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fmodern\fcharset0 Courier;
+\f3\froman\fcharset0 Times-Roman;\f4\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red38\green38\blue38;
+\red242\green242\blue242;\red19\green32\blue42;\red255\green255\blue255;\red184\green14\blue61;\red247\green238\blue241;
+\red0\green0\blue0;\red107\green255\blue137;\red197\green197\blue197;\red31\green56\blue73;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985;\cssrgb\c20000\c20000\c20000;
+\cssrgb\c96078\c96078\c96078;\cssrgb\c9412\c16863\c21569;\cssrgb\c100000\c100000\c100000;\cssrgb\c78039\c14510\c30588;\cssrgb\c97647\c94902\c95686;
+\cssrgb\c0\c0\c0;\cssrgb\c47059\c100000\c60784;\cssrgb\c81569\c81569\c81569;\cssrgb\c16078\c28235\c35686;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww26380\viewh12700\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 \
+
+\fs24 #Setting Path for the python 2.7\
+PATH="$PATH:/Users/arpi8645/Library/Python/2.7/bin" \
+\
+export PATH\
+\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs26 \cf4 \cb5 \expnd0\expndtw0\kerning0
+\CocoaLigature1 $ echo $PATH\
+\
+which python\
+\
+Python \'97version\
+\
+pip list\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs24 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs26 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 $ chmod u+x hello.py\
+\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f1\fs32 \cf6 \cb7 For a development project, we will leverage a new tool to manage our project\'92s virtualenv and install dependencies. This tool is called\'a0{\field{\*\fldinst{HYPERLINK "https://docs.pipenv.org/"}}{\fldrslt 
+\f0\fs28\fsmilli14400 \cf8 \cb9 \ul \ulc8 pipenv}}. Let\'92s install\'a0{\field{\*\fldinst{HYPERLINK "https://docs.pipenv.org/"}}{\fldrslt 
+\f0\fs28\fsmilli14400 \cf8 \cb9 \ul \ulc8 pipenv}}\'a0for our user and create a Python 3 virtualenv for our project:\
+In the project directory\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\fs26 \cf4 \cb5 $ pip3.6 install --user pipenv\
+$ pipenv --python $(which python3.6)\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \cb3 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs28\fsmilli14400 \cf8 \cb9 pipenv shell\
+\'97to deactivate the shell\
+exit\
+\
+For python 2\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f2\fs32 \cf7 \cb10 virtualenv -p /home/
+\fs34 \cf11 arpi8645
+\fs32 \cf7 /opt/python-2.7.15/bin/python venv\cf12 \
+\cf7 source venv/bin/activate\cf12 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs26 \cf4 \cb5 \expnd0\expndtw0\kerning0
+\CocoaLigature1 pipenv install --dev pytest-mock\
+\
+After the setup file\
+pip install -e .\
+Pip uninstall pgbackup\
+\
+\
+PYTHONPATH=./src python\
+\
+from pgbackup import pgdump\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f3\fs28 \cf4 proc = pgdump.dump(\'91postgres://postgres:{\field{\*\fldinst{HYPERLINK "mailto:password@example.com"}}{\fldrslt \cf13 \ul \ulc13 postgres%24123@}}\cf13 \ul \ulc13 localhost\cf4 \ulnone :5432/sample\'92)
+\f4\fs24 \cf2 \cb3 \
+\
+\
+\
+supernova bigdata-dfw boot --image 
+\f0\fs22 \kerning1\expnd0\expndtw0 \CocoaLigature0 5a0422c0-628e-41c8-8084-95ef80a943d6
+\f4\fs24 \expnd0\expndtw0\kerning0
+\CocoaLigature1  --flavor=general1-2 --key-name arpit-dfw --meta build_config=backup_defaults,backup_agent_only arpit-dfw-demo1\
+\
+# Used to get into the console - Gives one link where you can directly log into browser window\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs30 \cf2 Supernova bigdata2-dfw get-vnc-console b3d7d229-010c-4267-b3bf-27b7d500035c novnc
+\f4\fs24 \
+}
